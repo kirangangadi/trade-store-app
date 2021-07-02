@@ -1,5 +1,6 @@
 # Introduction 
-This document describes in detail of Trade store app. With this app client will be able to store Trade data or retrieve data with the help of available API.
+This document describes in detail of Trade store app. With this app client will be able to store Trade data or retrieve data with the help of available API. Trade app also takes care of updating expired trades with scheduler on every day at 1.00 AM
+This app is implemented with Java 8, Spring Boot, Maven, H2Database
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
