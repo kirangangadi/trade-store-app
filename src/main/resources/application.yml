@@ -1,0 +1,17 @@
+spring:
+  main:
+    banner-mode: off
+#  datasource:
+#    type: com.basf.customerdata.helpers.HikariDataSourceConnection
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
+      hibernate.generate_statistics: false
+      hibernate.ddl-auto : none
+      hibernate.format_sql: true
+    show-sql: false
+    # Hibernate ddl auto (create, create-drop, validate, update)
+    hibernate:
+      ddl-auto: none
+#logging:
+#  config: classpath:log4j2.xml

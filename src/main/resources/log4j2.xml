@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="com.basf">
+	<Properties>
+		<property name="filters">
+			sun.reflect,java.lang.reflect,org.apache.logging.log4j.web,
+			org.springframework.aop,org.springframework.cglib.proxy,
+			com.sun.proxy
+		</property>
+		<Property name="logPattern">%d{yyyy-MM-dd'T'HH:mm:ss,SSSZ} %level{length=1} [%t] %c{1.}:%L %m %xEx{filters(${filters})}%xEx{0}%n</Property>
+	</Properties>
+	<Appenders>
+		<Console name="ConsoleAppender" target="SYSTEM_OUT">
+			<PatternLayout pattern="${logPattern}" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.db" level="debug" />
+		<Logger name="org.springframework.security" level="DEBUG"/>
+		<Logger name="org.hibernate.SQL" level="debug" />
+		<Logger name="org.hibernate.stat" level="debug" />
+		<Logger name="org.hibernate.engine.internal.StatisticalLoggingSessionEventListener" level="error" />
+		<Logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="trace" />
+		<Root level="info">
+			<AppenderRef ref="ConsoleAppender" />
+		</Root>
+	</Loggers>
+</Configuration>
