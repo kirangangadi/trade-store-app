@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class GlobalControllerAdvice extends ResponseEntityExceptionHandler {
 
 	/*
-	 *this function throws 404 status code 
+	 *this function throws 404 status code with Custom Message
 	 */
 	@ExceptionHandler(NotFoundException.class)
 	public final ResponseEntity<ExceptionResponse> handleNotFoundException(NotFoundException ex) {
@@ -26,7 +26,7 @@ public class GlobalControllerAdvice extends ResponseEntityExceptionHandler {
 	}
 
 	/*
-	 *this function throws 400 status code 
+	 *this function throws 400 status code with Custom Message
 	 */
 	@ExceptionHandler(BadRequestException.class)
 	public final ResponseEntity<ExceptionResponse> handleNotFoundException(BadRequestException ex) {

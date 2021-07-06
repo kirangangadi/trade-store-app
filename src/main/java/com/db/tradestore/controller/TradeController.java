@@ -12,7 +12,7 @@ public interface TradeController {
 
 	@GetMapping(value = "/trades")
 	@ApiOperation(value = "Get all trades")
-	@ApiResponses({ @ApiResponse(code = 200, message = "if there are no trees with in the given radius") })
+	@ApiResponses({ @ApiResponse(code = 200, message = "") })
 	public List<Trade> getTrades();
 
 	@GetMapping(value = "/trade/{id}")

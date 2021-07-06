@@ -11,7 +11,7 @@ public class StatefulEntity implements Serializable {
     private Date createdDate;
 
     @PrePersist
-    private void initilizeInsert() {
+    private void initializeInsert() {
         Timestamp currentDate = new Timestamp(new Date().getTime());
         this.createdDate = currentDate;
     }

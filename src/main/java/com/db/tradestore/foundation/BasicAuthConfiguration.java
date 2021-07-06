@@ -3,6 +3,7 @@ package com.db.tradestore.foundation;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -19,6 +20,7 @@ import com.db.tradestore.service.UserService;
 @Configuration
 @EnableWebSecurity
 public class BasicAuthConfiguration extends WebSecurityConfigurerAdapter {
+
 
 	private static final String[] AUTH_WHITELIST = { "/v2/api-docs", "/swagger-resources/configuration/ui",
 			"/swagger-resources", "/swagger-resources/configuration/security", "/swagger-ui.html", "/webjars/**",

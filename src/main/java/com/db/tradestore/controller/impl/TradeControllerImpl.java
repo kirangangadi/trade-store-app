@@ -57,7 +57,7 @@ public class TradeControllerImpl implements TradeController {
             }
             return reqTrade;
         } else
-            // Trade id in request body and path param doesn't match then 400 response code should be sent
+            // Trade id in request body and path param doesn't match then 400 response code should be sent to client
             throw new BadRequestException(TradeErrorCodes.TS_EXEC_03, "400");
     }
 }
